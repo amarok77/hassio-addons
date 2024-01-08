@@ -17,7 +17,7 @@ init: false
 #panel_admin: false
 #homeassistant_api: true
 #hassio_api: true
-name = "Reolink E1"
-username = "admin"
-password = "12345678"
-address = "192.168.1.187:9000"
+name: "Reolink E1"
+username: "admin"
+password: "12345678"
+address: "192.168.1.187:9000"
