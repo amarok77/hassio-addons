@@ -5,7 +5,7 @@ panel_title: Neolink
 slug: neolink
 description: An RTSP bridge to Reolink E1 IP camera
 url: "https://github.com/thirtythreeforty/neolink"
-image: ghcr.io/amarok77/neolink
+image: ghcr.io/thirtythreeforty/neolink
 startup: application
 boot: auto
 init: false
