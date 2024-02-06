@@ -10,6 +10,6 @@ Or, in your Home Assistant, navigate to _Configuration_ > _Add-ons, Backups & Su
 
 ## Add-ons provided by this repository
 
-- [NEOLINK](neolink/README.md)
+
   
-An RTSP bridge to Reolink E1 IP camera
+
