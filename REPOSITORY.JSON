@@ -1,0 +1,6 @@
+{
+    "name": "HA Add-ons by amarok",
+    "udev": true,
+    "url": "https://github.com/amarok77/hassio-addons",
+    "maintainer": "amarok77"
+  }
