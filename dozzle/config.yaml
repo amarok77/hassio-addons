@@ -1,7 +1,7 @@
 name: Dozzle
-version: 
+version: 3
 slug: dozzle
-description: xxxxxxxxxxxx
+description: Dozzle is a Log viewer designed to simplify the process of monitoring and debugging containers.
 url: https://github.com/amarok77/addon-dozzle
 arch:
 - amd64
@@ -11,11 +11,15 @@ panel_icon: mdi:log
 map:
 - ssl
 service:
-- mysql:need
+  dozzle:
+    container_name: dozzle
+    image: amir20/doozle:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 ports:
-  xxx/tcp: xxx
+  8080/tcp: 8080
 ports_description:
-  xxxx/tcp: Dozzle TCP port
+  8080/tcp: Dozzle TCP port
 hassio_api: true
 option:
   timezone: CET
