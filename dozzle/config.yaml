@@ -1,0 +1,29 @@
+name: Dozzle
+version: 
+slug: dozzle
+description: xxxxxxxxxxxx
+url: https://github.com/amarok77/addon-dozzle
+arch:
+- amd64
+stage: experimental
+init: false
+panel_icon: mdi:log
+map:
+- ssl
+service:
+- mysql:need
+ports:
+  xxx/tcp: xxx
+ports_description:
+  xxxx/tcp: Dozzle TCP port
+hassio_api: true
+option:
+  timezone: CET
+  admin_user: admin
+  admin_password: admin
+schema:
+  timezone: str
+  admin_user: str
+  admin_password: str
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+image: ghcr.io/amarok77/dozzle/amd64
