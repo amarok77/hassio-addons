@@ -11,7 +11,3 @@ arch:
 - i386
 stage: experimental
 init: false
-panel_icon: mdi:user
-service:
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
