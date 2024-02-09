@@ -3,9 +3,9 @@ version: 3
 slug: dozzle
 description: Dozzle is a Log viewer designed to simplify the process of monitoring and debugging containers.
 #url: https://github.com/amarok77/addon-dozzle
-arch:
-- amd64
-- armv7
+#arch:
+#- amd64
+#- armv7
 stage: experimental
 init: false
 panel_icon: mdi:log
