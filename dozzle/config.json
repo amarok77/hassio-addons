@@ -15,9 +15,11 @@
   "ports": {
     "8080/tcp": 8080
     },
+  "container_name": "Dozzle",
   "image": "amir20/dozzle:latest",
   "legacy": true,
   "ingress": true,
   "ingress_port": 8080,
-  "panel_icon": "mdi:car"
+  "panel_icon": "mdi:car",
+  "volumes": "/var/run/docker.sock:/var/run/docker.sock"
 }
