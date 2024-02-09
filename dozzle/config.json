@@ -15,10 +15,10 @@
   "ports": {
     "5000/tcp": null
     },
-  "image": "amir20/dozzle",
+  "image": "amir20/dozzle:latest",
   "legacy": true,
   "ingress": true,
   "ingress_port": 8080,
   "panel_icon": "mdi:car",
-  "environment": {"DOZZLE_PORT": "8080", "DOZZLE_CONFIG_DIR": "/data"},
+  "environment": {"DOZZLE_PORT": "8080", "DOZZLE_CONFIG_DIR": "/data"}
 }
