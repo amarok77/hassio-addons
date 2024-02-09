@@ -2,7 +2,7 @@ name: Dozzle
 version: 3
 slug: dozzle
 description: Dozzle is a Log viewer designed to simplify the process of monitoring and debugging containers.
-url: https://github.com/amarok77/addon-dozzle
+#url: https://github.com/amarok77/addon-dozzle
 arch:
 - amd64
 stage: experimental
@@ -24,7 +24,7 @@ hassio_api: true
 option:
   timezone: CET
   admin_user: admin
-  admin_password: admin
+  admin_password: password
 schema:
   timezone: str
   admin_user: str
