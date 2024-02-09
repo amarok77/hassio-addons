@@ -32,9 +32,3 @@ schema:
   admin_user: str
   admin_password: str
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
-healthcheck:
-  test: ["CMD", "/dozzle", "healthcheck"]
-  interval: 3s
-  timeout: 30s
-  retries: 5
-  start_period: 30s
