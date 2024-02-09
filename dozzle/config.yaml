@@ -1,7 +1,0 @@
-name: Dozzle
-version: 1.2
-slug: dozzle
-description: Dozzle is a Log viewer designed to simplify the process of monitoring and debugging containers.
-url: https://github.com/amir20/dozzle
-stage: experimental
-
