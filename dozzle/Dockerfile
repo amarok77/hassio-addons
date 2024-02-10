@@ -16,7 +16,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #ARG BUILD_VERSION
 
 # Setup base
-RUN apt-get update && apt-get install --no-cache docker go nodejs pnpm
+RUN apt-get update && apt-get install --no-cache docker
 #    mariadb-client=10.11.6-r0 \
 #    nginx=1.24.0-r15 \ 
  
