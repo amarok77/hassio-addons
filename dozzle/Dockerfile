@@ -1,24 +1,22 @@
-FROM arm32v6/alpine:3.8
-# hadolint ignore=DL3006
-#FROM ${BUILD_FROM}
+ARG BUILD_FROM
+
+FROM ${BUILD_FROM}
 
 # Set shell
-# SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 
 # Build arguments
-ARG BUILD_ARCH
+#ARG BUILD_ARCH
 #ARG BUILD_DATE
 #ARG BUILD_DESCRIPTION
-ARG BUILD_NAME
+#ARG BUILD_NAME
 #ARG BUILD_REF
 #ARG BUILD_REPOSITORY
-ARG BUILD_VERSION
+#ARG BUILD_VERSION
 
 # Setup base
-RUN apk update
-RUN apk add --no-cache docker-ce
-# RUN apk update && apk add --no-cache go nodejs pnpm
+RUN apt-get update && apt-get install --no-cache docker go nodejs pnpm
 #    mariadb-client=10.11.6-r0 \
 #    nginx=1.24.0-r15 \ 
  
@@ -29,6 +27,8 @@ COPY run.sh /
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
+
+EXPOSE 8080
 
 # Labels
 LABEL \
