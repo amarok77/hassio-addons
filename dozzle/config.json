@@ -23,6 +23,9 @@
     "config:rw"
   ],
   "image": "amir20/dozzle:latest",
+  "services": {
+    "volume": "/var/run/docker.sock:/var/run/docker.sock"
+  }, 
   "options": {},
   "schema": {},
   "privileged": [
