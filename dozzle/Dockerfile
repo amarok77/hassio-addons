@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG amir20/dozzle:latest
 
 FROM ${BUILD_FROM}
 
@@ -14,19 +14,20 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #ARG BUILD_REF
 #ARG BUILD_REPOSITORY
 #ARG BUILD_VERSION
+VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
 # Setup base
-RUN apt-get update && apt-get install --no-cache docker
+# RUN apt-get update && apt-get install --no-cache docker
 #    mariadb-client=10.11.6-r0 \
 #    nginx=1.24.0-r15 \ 
  
 
 # Copy data for add-on
-COPY run.sh /
+#COPY run.sh /
 
-RUN chmod a+x /run.sh
+#RUN chmod a+x /run.sh
 
-CMD [ "/run.sh" ]
+#CMD [ "/run.sh" ]
 
 EXPOSE 8080
 
