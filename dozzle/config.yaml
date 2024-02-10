@@ -1,5 +1,5 @@
 name: Dozzle
-version: 6.2.2
+version: 6.2.4
 slug: dozzle
 description: Container log viewer
 url: https://github.com/amarok77/hassio-addons
@@ -40,4 +40,4 @@ schema:
   #smtp_relayhost_credentials: str?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   #message_size_limit: int
-image: amir20/dozzle:latest
+image: "amir20/dozzle:latest"
