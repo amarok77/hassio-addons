@@ -40,5 +40,5 @@ schema:
   #smtp_relayhost_credentials: str?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   #message_size_limit: int
-#image: "amir20/dozzle"
-webui: "http://localhost:[PORT:8080]"
+#image: ghcr.io/amir20/dozzle-6.2.3
+#webui: "http://localhost:[PORT:8080]"
