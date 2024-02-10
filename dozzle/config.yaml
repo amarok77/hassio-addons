@@ -1,9 +1,8 @@
-name: Mailserver
-version: 2.0.4
-slug: mailserver
-description: Postfix and Dovecot mail server for Home Assistant, with Postfix Admin
-  web interface
-url: https://github.com/erik73/hassio-addons
+name: Dozzle
+version: 6.2.2
+slug: dozzle
+description: Container log viewer
+url: https://github.com/amarok77/hassio-addons
 arch:
 - aarch64
 - amd64
@@ -11,40 +10,34 @@ arch:
 - i386
 init: false
 ingress: true
-ingress_stream: true
-panel_icon: mdi:email
+#ingress_stream: true
+panel_icon: mdi:binoculars
 map:
 - ssl
-services:
-- mysql:need
+#services:
+#- mysql:need
 ports:
-  25/tcp: 25
-  465/tcp: 465
-  587/tcp: 587
-  993/tcp: 993
+  8080/tcp: 8080
 ports_description:
-  25/tcp: SMTP
-  465/tcp: SMTP
-  587/tcp: SMTP
-  993/tcp: IMAPS
-hassio_api: true
+  8080/tcp: HTTP
+hassio_api: false
 options:
-  my_hostname: mydomain.no-ip.com
-  domain_name: mydomain.no-ip.com
+  #my_hostname: mydomain.no-ip.com
+  #domain_name: mydomain.no-ip.com
   admin_user: admin
   admin_password: null
-  letsencrypt_certs: false
-  enable_mailfilter: false
-  message_size_limit: 10
+  #letsencrypt_certs: false
+  #enable_mailfilter: false
+  #message_size_limit: 10
 schema:
-  my_hostname: str
-  domain_name: str
+  #my_hostname: str
+  #domain_name: str
   admin_user: str
   admin_password: str
-  letsencrypt_certs: bool
-  enable_mailfilter: bool
-  smtp_relayhost: str?
-  smtp_relayhost_credentials: str?
+  #letsencrypt_certs: bool
+  #enable_mailfilter: bool
+  #smtp_relayhost: str?
+  #smtp_relayhost_credentials: str?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
-  message_size_limit: int
-image: ghcr.io/erik73/mailserver/{arch}
+  #message_size_limit: int
+image: ghcr.io/amir20/dozzle/{arch}
