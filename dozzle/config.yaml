@@ -41,3 +41,4 @@ schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   #message_size_limit: int
 #image: "amir20/dozzle:latest"
+ webui: "http://[HOST]:[PORT:8080]"
