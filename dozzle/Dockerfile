@@ -1,6 +1,6 @@
 FROM arm32v6/alpine:3.8
 # hadolint ignore=DL3006
-FROM ${BUILD_FROM}
+#FROM ${BUILD_FROM}
 
 # Set shell
 # SHELL ["/bin/bash", "-o", "pipefail", "-c"]
