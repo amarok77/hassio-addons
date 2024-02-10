@@ -16,7 +16,7 @@ ARG BUILD_NAME
 ARG BUILD_VERSION
 
 # Setup base
-RUN apk update && apk add --no-cache go nodejs pnpm
+# RUN apk update && apk add --no-cache go nodejs pnpm
 #    mariadb-client=10.11.6-r0 \
 #    nginx=1.24.0-r15 \ 
  
