@@ -1,0 +1,10 @@
+name: Dozzle
+version: 0.1.1
+slug: dozzle
+description: Container log viewer
+url: https://github.com/amarok77/hassio-addons
+arch:
+- aarch64
+- amd64
+- armv7
+- i386
