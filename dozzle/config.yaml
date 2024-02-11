@@ -1,5 +1,5 @@
 name: Dozzle
-version: 0.1
+version: 0.1.1
 slug: dozzle
 description: Container log viewer
 url: https://github.com/amarok77/hassio-addons
@@ -14,7 +14,12 @@ ingress: true
 panel_icon: mdi:binoculars
 #map:
 #- ssl
-#services:
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 #- mysql:need
 ports:
   8080/tcp: 8080
