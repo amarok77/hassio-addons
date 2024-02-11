@@ -3,7 +3,7 @@ ARG amir20/dozzle:latest
 FROM amir20/dozzle:latest
 
 # Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+#SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 
 # Build arguments
