@@ -23,9 +23,9 @@ FROM amir20/dozzle:latest
  
 
 # Copy data for add-on
-COPY run.sh /
+#COPY run.sh /
 
-RUN chmod a+x /run.sh
+#RUN chmod a+x /run.sh
 
 EXPOSE 8080
 
@@ -50,4 +50,4 @@ LABEL \
     org.opencontainers.image.version=${BUILD_VERSION}
 
 
-CMD [ "/run.sh" ]
+#CMD [ "/run.sh" ]
