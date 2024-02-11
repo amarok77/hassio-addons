@@ -45,8 +45,8 @@ LABEL \
     org.opencontainers.image.authors="Amarok <caltaste@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://github.com/amarok77/hassio-addons" \
-    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
-    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
+    org.opencontainers.image.source="https://github.com/amir20" \
+    org.opencontainers.image.documentation="https://github.com/amir20/dozzle/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
