@@ -12,8 +12,8 @@ init: false
 ingress: true
 #ingress_stream: true
 panel_icon: mdi:binoculars
-map:
-- ssl
+#map:
+#- ssl
 #services:
 #- mysql:need
 ports:
