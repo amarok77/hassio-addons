@@ -15,11 +15,10 @@ panel_icon: mdi:binoculars
 #map:
 #- ssl
 services:
-  dozzle:
-    container_name: dozzle
-    image: amir20/dozzle:latest
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+  container_name: dozzle
+  image: amir20/dozzle:latest
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
 #- mysql:need
 ports:
   8080/tcp: 8080
