@@ -1,4 +1,4 @@
 #!/bin/sh
-set -e
+#set -e
 
 dozzle -p 8888:8080
