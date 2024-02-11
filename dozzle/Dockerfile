@@ -14,7 +14,7 @@ FROM amir20/dozzle:latest
 #ARG BUILD_REF
 #ARG BUILD_REPOSITORY
 #ARG BUILD_VERSION
-VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
+#VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
 # Setup base
 # RUN apt-get update && apt-get install --no-cache docker
@@ -23,11 +23,11 @@ VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
  
 
 # Copy data for add-on
-COPY run.sh /
+#COPY run.sh /
 
-RUN chmod a+x /run.sh
+#RUN chmod a+x /run.sh
 
-EXPOSE 8080
+#EXPOSE 8080
 
 # Labels
 LABEL \
@@ -50,4 +50,4 @@ LABEL \
     org.opencontainers.image.version=${BUILD_VERSION}
 
 
-CMD [ "/run.sh" ]
+#CMD [ "/run.sh" ]
