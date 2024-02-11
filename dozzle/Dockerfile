@@ -14,7 +14,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #ARG BUILD_REF
 #ARG BUILD_REPOSITORY
 #ARG BUILD_VERSION
-VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
+#VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
 # Setup base
 # RUN apt-get update && apt-get install --no-cache docker
@@ -23,11 +23,9 @@ VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
  
 
 # Copy data for add-on
-#COPY run.sh /
+COPY run.sh /
 
-#RUN chmod a+x /run.sh
-
-#CMD [ "/run.sh" ]
+RUN chmod a+x /run.sh
 
 EXPOSE 8080
 
@@ -50,3 +48,6 @@ LABEL \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
+
+
+CMD [ "/run.sh" ]
