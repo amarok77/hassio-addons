@@ -1,6 +1,6 @@
 {
     "name": "Dozzle - Beta",
-    "version": "0.1.4",
+    "version": "6.2.4",
     "slug": "dozzle-beta",
     "image": "amir20/dozzle",
     "description": "BETA version of Dozzle Container Log viewer HA addon. Image based on upstream docker images.",
