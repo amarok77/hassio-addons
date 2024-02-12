@@ -17,4 +17,8 @@ RUN pnpm install
 COPY run_addon.sh /
 RUN chmod a+x /run_addon.sh
 
+EXPOSE 8080
+
+VOLUME /var/run/docker.sock /var/run/docker.sock
+
 ENTRYPOINT [ "/run_addon.sh" ]
