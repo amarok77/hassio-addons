@@ -1,7 +1,7 @@
 name: Dozzle Beta
 version: 0.1.2
 slug: dozzle-beta
-description: Container log viewer
+description: Container log viewer.
 image: amir20/dozzle
 url: https://dozzle.dev
 arch:
@@ -9,13 +9,10 @@ arch:
 - amd64
 - armv7
 - i386
-startup: system
+startup: application
 boot: auto
 ports:
   - 8080/tcp: 8080
-environment:
-  DOZZLE_PATH: /var/run/docker.sock
-  DOCKER_PATH: /var/run/docker.sock
 options:
 schema:
 webui: http://[HOST]:[PORT:8080]
