@@ -10,7 +10,7 @@ arch:
 - armv7
 boot: auto
 ports:
-- 8080/tcp: 8080
+  8080/tcp: 8080
 options:
 schema:
 #webui: http://[HOST]:[PORT:8080]
