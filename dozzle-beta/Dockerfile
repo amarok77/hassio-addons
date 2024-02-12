@@ -17,7 +17,8 @@ FROM amir20/dozzle:latest
 #VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
 # Setup base
-# RUN apk add --no-cache docker
+RUN apk add --no-cache bash
+
 #    mariadb-client=10.11.6-r0 \
 #    nginx=1.24.0-r15 \ 
 
@@ -29,6 +30,6 @@ COPY run.sh /
 
 RUN chmod a+x /run.sh
 
-#CMD [ "/run.sh" ]
+CMD [ "/run.sh" ]
 
-ENTRYPOINT ["/run.sh"]
+#ENTRYPOINT ["/run.sh"]
