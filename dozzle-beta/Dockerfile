@@ -2,8 +2,9 @@ ARG amir20/dozzle:latest
 FROM amir20/dozzle:latest
 
 # Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+#SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+USER root
 
 # Build arguments
 #ARG BUILD_ARCH
@@ -28,6 +29,6 @@ COPY run.sh /
 
 RUN chmod a+x /run.sh
 
-CMD [ "/run.sh" ]
+#CMD [ "/run.sh" ]
 
-ENTRYPOINT ["/dozzle"]
+ENTRYPOINT ["/run.sh"]
