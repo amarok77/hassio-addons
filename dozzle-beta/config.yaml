@@ -9,7 +9,7 @@ arch:
 - amd64
 - armv7
 - i386
-startup: before
+startup: system
 boot: auto
 ports:
   - 8080/tcp: 8080
@@ -18,3 +18,4 @@ environment:
   DOCKER_PATH: /var/run/docker.sock
 options:
 schema:
+webui: http://[HOST]:[PORT:8080]
