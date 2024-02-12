@@ -2,7 +2,7 @@
     "name": "Dozzle - Beta",
     "version": "0.1.4",
     "slug": "dozzle-beta",
-    "image": "amir20/dozzle:latest",
+    "image": "amir20/dozzle",
     "description": "BETA version of Dozzle Container Log viewer HA addon. Image based on upstream docker images.",
     "url": "https://github.com/amarok77/hassio-addons/tree/master/dozzle-beta",
     "startup": "system",    
