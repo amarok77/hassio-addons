@@ -24,7 +24,7 @@ RUN apk add --no-cache bash
 
 #VOLUME /var/run/docker.sock:/var/run/docker.sock
 #EXPOSE 8080
-
+EXPOSE map[8080]
 # Copy data for add-on
 COPY run.sh /
 
