@@ -4,7 +4,7 @@ FROM amir20/dozzle:latest
 # Set shell
 #SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-USER root
+#USER root
 
 # Build arguments
 #ARG BUILD_ARCH
@@ -14,7 +14,7 @@ USER root
 #ARG BUILD_REF
 #ARG BUILD_REPOSITORY
 #ARG BUILD_VERSION
-VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
+#VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
 # Setup base
 # RUN apk add --no-cache docker
@@ -22,7 +22,7 @@ VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 #    nginx=1.24.0-r15 \ 
 
 #VOLUME /var/run/docker.sock:/var/run/docker.sock
-EXPOSE 8080
+#EXPOSE 8080
 
 # Copy data for add-on
 COPY run.sh /
