@@ -1,7 +1,7 @@
 {
-    "name": "Dozzle",
+    "name": "Dozzle 1",
     "version": "1.0.0",
-    "slug": "dozzle",
+    "slug": "dozzle-alpha",
     "description": "Dozzle container monitor for Home Assistant",
     "startup": "before",
     "boot": "auto"
