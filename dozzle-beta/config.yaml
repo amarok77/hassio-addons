@@ -1,6 +1,6 @@
-name: Dozzle
+name: Dozzle Beta
 version: 0.1.1
-slug: dozzle
+slug: dozzle-beta
 description: Container log viewer
 url: https://github.com/amarok77/hassio-addons
 arch:
