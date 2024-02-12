@@ -1,0 +1,8 @@
+{
+    "build_from": {
+	"amd64" : "amir20/dozzle:latest",
+	"armhf" : "amir20/dozzle:latest",
+    "armv7" : "amir20/dozzle:latest",
+    "aarch64" : "amir20/dozzle:latest"
+    }
+}
