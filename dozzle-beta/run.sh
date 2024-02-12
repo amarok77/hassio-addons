@@ -1,5 +1,5 @@
 #/bin/sh
-sed -i
+set -e
 
 dozzle
 
