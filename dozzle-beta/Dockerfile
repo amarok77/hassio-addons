@@ -13,14 +13,14 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 #ARG BUILD_REF
 #ARG BUILD_REPOSITORY
 #ARG BUILD_VERSION
-#VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
+VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
 # Setup base
 # RUN apk add --no-cache docker
 #    mariadb-client=10.11.6-r0 \
 #    nginx=1.24.0-r15 \ 
 
-VOLUME /var/run/docker.sock:/var/run/docker.sock
+#VOLUME /var/run/docker.sock:/var/run/docker.sock
 EXPOSE 8080
 
 # Copy data for add-on
