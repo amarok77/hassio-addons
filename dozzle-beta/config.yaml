@@ -10,11 +10,11 @@ arch:
   - amd64
   - armv7
 #boot: auto
-ports:
-  8080/tcp: 8080
-ports_description:
-  8080/tcp: HTTP
+#ports:
+#  8080/tcp: 8080
+#ports_description:
+#  8080/tcp: HTTP
 #ingress: true
-options:
-schema:
+#options:
+#schema:
 #webui: http://[HOST]:[PORT:8080]
