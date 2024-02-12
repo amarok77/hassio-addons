@@ -1,8 +1,9 @@
 {
     "name": "Dozzle Alpha",
-    "version": "1.0.0",
+    "version": "v6.2.4",
     "slug": "dozzle-alpha",
     "description": "Dozzle container monitor for Home Assistant",
+    "arch": ["armhf", "amd64", "armv7", "aarch64"],
     "startup": "before",
     "boot": "auto"
   }
