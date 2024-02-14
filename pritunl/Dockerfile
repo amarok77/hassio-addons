@@ -6,20 +6,20 @@ USER root
 RUN mkdir /etc/yum.repos.d/
 
 COPY mongodb-org-6.0.repo /etc/yum.repos.d/ 
-RUN yum update 
-RUN yum -y install mongodb-org
+RUN dnf update 
+RUN dnf -y install mongodb-org
 
 RUN systemctl start mongod \
     systemctl enable mongod
 
 RUN export VERSION="master"
 
-RUN yum -y install epel \
+RUN dnf -y install epel \
     oracle-epel-release-el8
 
-RUN yum-config-manager --enable ol8_developer_EPEL
+RUN dnf-config-manager --enable ol8_developer_EPEL
 
-RUN yum -y install openssl-devel \
+RUN dnf -y install openssl-devel \
     bzip2-devel \
     libffi-devel \
     sqlite-devel \
