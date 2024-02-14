@@ -1,5 +1,5 @@
-ARG BUILD_FROM=fedora:latest
-FROM $BUILD_FROM
+#ARG BUILD_FROM=fedora:latest
+FROM fedora:latest
 
 USER root
 
