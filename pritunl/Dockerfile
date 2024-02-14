@@ -4,6 +4,7 @@ FROM fedora:33
 USER root
 
 COPY mongodb-org-6.0.repo /etc/yum.repos.d/ 
+RUN dnf config-manager --add-repo /etc/yum.repos.d/grafanamongodb-org-6.0.repo
 RUN dnf update 
 RUN dnf install -y mongodb-org
 
