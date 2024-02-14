@@ -8,7 +8,7 @@ ARG BUILD_ARCH
 #USER root
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apk add --no-cache gnupg curl apt-transport-https
+#RUN apk add --no-cache gnupg curl apt-transport-https
 
 RUN apt-get update \
     && apt-get install -y gnupg curl apt-transport-https
