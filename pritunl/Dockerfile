@@ -1,7 +1,7 @@
 #ARG BUILD_FROM
 #FROM $BUILD_FROM
 #ARG BUILD_ARCH
-FROM debian:latest
+FROM alpinelinux/build-base:latest
 #ENV LANG C.UTF-8
 
 
@@ -10,18 +10,18 @@ FROM debian:latest
 
 #RUN apk add --no-cache gnupg curl apt-transport-https
 
-RUN apt-get update
-RUN apt-get install -y gnupg curl apt-transport-https
+#RUN apt-get update
+RUN apk add gnupg curl mongodb-org
     
-RUN curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
+#RUN curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
 
-RUN echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/6.0 main" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+#RUN echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/6.0 main" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
     
-RUN apt-get update
-RUN apt-get install -y mongodb-org
+#RUN apt-get update
+#RUN apt-get install -y mongodb-org
 
-RUN systemctl start mongod \
-    systemctl enable mongod
+RUN systemctl start mongod
+RUN systemctl enable mongod
 
 RUN export VERSION="master"
 
