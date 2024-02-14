@@ -11,8 +11,12 @@ FROM alpinelinux/build-base:latest
 #RUN apk add --no-cache gnupg curl apt-transport-https
 
 #RUN apt-get update
-RUN apk add gnupg curl mongodb
-    
+
+RUN echo ‘http://dl-cdn.alpinelinux.org/alpine/v3.9/main’ >> /etc/apk/repositories
+RUN echo ‘http://dl-cdn.alpinelinux.org/alpine/v3.9/community’ >> /etc/apk/repositories
+
+RUN apk add mongodb
+
 #RUN curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
 
 #RUN echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/6.0 main" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
