@@ -3,8 +3,6 @@ FROM fedora:33
 
 USER root
 
-RUN mkdir /etc/yum.repos.d/
-
 COPY mongodb-org-6.0.repo /etc/yum.repos.d/ 
 RUN dnf update 
 RUN dnf -y install mongodb-org
