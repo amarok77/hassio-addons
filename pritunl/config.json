@@ -1,6 +1,6 @@
 {
     "name": "Pritunl",
-    "version": "0.1",
+    "version": "0.1.1",
     "slug": "pritunl",
     "description": "Enterprise vpn server",
     "arch": ["armhf", "amd64", "armv7", "aarch64"],
