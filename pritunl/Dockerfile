@@ -17,8 +17,8 @@ RUN curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | gpg -o /usr/s
 
 RUN echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/6.0 main" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
     
-RUN apt-get update \
-    && apt-get install -y mongodb-org
+RUN apt-get update
+RUN apt-get install -y mongodb-org
 
 RUN systemctl start mongod \
     systemctl enable mongod
