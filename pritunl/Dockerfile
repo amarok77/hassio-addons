@@ -1,5 +1,5 @@
 #ARG BUILD_FROM=fedora:latest
-FROM fedora:latest
+FROM fedora:33
 
 USER root
 
