@@ -6,7 +6,8 @@ USER root
 RUN mkdir /etc/yum.repos.d/
 
 COPY mongodb-org-6.0.repo /etc/yum.repos.d/ 
-RUN yum update && yum -y install mongodb-org
+RUN yum update 
+RUN yum -y install mongodb-org
 
 RUN systemctl start mongod \
     systemctl enable mongod
