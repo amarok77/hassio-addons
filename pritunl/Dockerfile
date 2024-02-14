@@ -2,6 +2,7 @@
 FROM fedora:33
 
 #USER root
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 COPY mongodb-org-6.0.repo /etc/yum.repos.d/ 
 RUN dnf config-manager --add-repo /etc/yum.repos.d/mongodb-org-6.0.repo
