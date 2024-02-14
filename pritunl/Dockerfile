@@ -1,7 +1,7 @@
 #ARG BUILD_FROM=fedora:latest
 FROM fedora:33
 
-USER root
+#USER root
 
 COPY mongodb-org-6.0.repo /etc/yum.repos.d/ 
 RUN dnf config-manager --add-repo /etc/yum.repos.d/grafanamongodb-org-6.0.repo
