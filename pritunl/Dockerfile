@@ -1,26 +1,25 @@
-#ARG BUILD_FROM=fedora:latest
-FROM fedora:33
+ARG BUILD_FROM
+FROM $BUILD_FROM
+ARG BUILD_ARCH
+
+ENV LANG C.UTF-8
+
 
 #USER root
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-COPY mongodb-org-6.0.repo /etc/yum.repos.d/
-RUN chomod 774 /etc/yum.repos.d/mongodb-org-6.0.repo
-RUN dnf config-manager --add-repo /etc/yum.repos.d/mongodb-org-6.0.repo
-RUN dnf update 
-RUN dnf install -y mongodb-org
+RUN apt-get update \
+    && apt-get install -y mongodb-org
 
 RUN systemctl start mongod \
     systemctl enable mongod
 
 RUN export VERSION="master"
 
-RUN dnf install -y epel \
+RUN apt-get install -y epel \
     oracle-epel-release-el8
 
-RUN dnf-config-manager --enable ol8_developer_EPEL
-
-RUN dnf install -y openssl-devel \
+RUN apt-get install -y openssl-devel \
     bzip2-devel \
     libffi-devel \
     sqlite-devel \
