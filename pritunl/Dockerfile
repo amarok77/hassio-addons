@@ -3,6 +3,8 @@ FROM $BUILD_FROM
 
 USER root
 
+RUN mkdir /etc/yum.repos.d/
+
 COPY mongodb-org-6.0.repo /etc/yum.repos.d/ 
 RUN yum update && yum -y install mongodb-org
 
