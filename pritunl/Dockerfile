@@ -10,8 +10,8 @@ FROM debian:latest
 
 #RUN apk add --no-cache gnupg curl apt-transport-https
 
-RUN apt-get update \
-    && apt-get install -y gnupg curl apt-transport-https
+RUN apt-get update
+RUN apt-get install -y gnupg curl apt-transport-https
     
 RUN curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor
 
