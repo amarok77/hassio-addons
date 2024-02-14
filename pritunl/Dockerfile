@@ -1,6 +1,8 @@
 ARG BUILD_FROM=fedora:latest
 FROM $BUILD_FROM
 
+USER root
+
 COPY mongodb-org-6.0.repo /etc/yum.repos.d/ 
 RUN yum update && yum -y install mongodb-org
 
