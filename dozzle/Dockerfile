@@ -1,6 +1,6 @@
 #ARG amir20/dozzle:latest
 
-FROM amir20/dozzle:latest
+FROM amir20/dozzle
 
 # Set shell
 #SHELL ["/bin/bash", "-o", "pipefail", "-c"]
