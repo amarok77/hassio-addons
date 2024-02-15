@@ -29,6 +29,9 @@ FROM amir20/dozzle:latest
 
 EXPOSE 8080
 
+ENTRYPOINT ["detach"]
+ENTRYPOINT ["volume", "/var/run/docker.sock", "/var/run/docker.sock"]
+
 # Labels
 LABEL \
     io.hass.name="${BUILD_NAME}" \
