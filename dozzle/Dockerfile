@@ -23,14 +23,14 @@ FROM amir20/dozzle:latest
  
 
 # Copy data for add-on
-#COPY run.sh /
+COPY run.sh /
 
-#RUN chmod a+x /run.sh
+RUN chmod a+x /run.sh
 
 EXPOSE 8080
 
 #ENTRYPOINT ["detach"]
-ENTRYPOINT ["volume", "/var/run/docker.sock:/var/run/docker.sock"]
+ENTRYPOINT ["/run.sh"]
 
 # Labels
 LABEL \
