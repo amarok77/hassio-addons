@@ -30,7 +30,7 @@ FROM amir20/dozzle:latest
 EXPOSE 8080
 
 #ENTRYPOINT ["detach"]
-ENTRYPOINT ["volume", "/var/run/docker.sock", "/var/run/docker.sock"]
+ENTRYPOINT ["volume", "/var/run/docker.sock:/var/run/docker.sock"]
 
 # Labels
 LABEL \
