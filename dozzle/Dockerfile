@@ -1,4 +1,4 @@
-ARG amir20/dozzle:latest
+#ARG amir20/dozzle:latest
 
 FROM amir20/dozzle:latest
 
@@ -14,7 +14,7 @@ FROM amir20/dozzle:latest
 #ARG BUILD_REF
 #ARG BUILD_REPOSITORY
 #ARG BUILD_VERSION
-VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
+#VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
 # Setup base
 # RUN apt-get update && apt-get install --no-cache docker
@@ -27,7 +27,7 @@ VOLUME ["/var/run/docker.sock", "/var/run/docker.sock"]
 
 #RUN chmod a+x /run.sh
 
-#EXPOSE 8080
+EXPOSE 8080
 
 # Labels
 LABEL \

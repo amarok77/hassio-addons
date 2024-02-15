@@ -1,0 +1,6 @@
+{
+    "name": "Example devcontainer for add-on repositories",
+    "image": "amir20/dozzle:latest",
+    "appPort": ["8080:8080"],
+    "runArgs": ["--privileged", "--volume=/var/run/docker.sock:/var/run/docker.sock"]
+}
