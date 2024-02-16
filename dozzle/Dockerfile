@@ -30,7 +30,7 @@ RUN chmod a+x /run.sh
 EXPOSE 8080
 
 #ENTRYPOINT ["detach"]
-ENTRYPOINT ["binary", "--volume=/var/run/docker.sock:/var/run/docker.sock", "--detach"]
+ENTRYPOINT ["run", "--volume=/var/run/docker.sock:/var/run/docker.sock", "--detach"]
 
 # Labels
 LABEL \
