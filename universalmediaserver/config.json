@@ -10,7 +10,5 @@
       "1044/tcp": 1044
     },
     "arch": ["armhf", "amd64", "armv7", "aarch64"],
-    "webui": "http://[HOST]:[PORT:9001]",
-    "schema": {
-    },
+    "webui": "http://[HOST]:[PORT:9001]"
 }
