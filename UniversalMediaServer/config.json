@@ -1,7 +1,7 @@
 {
     "name": "Universal Media Server",
     "version": "1.0",
-    "slug": "UniversalMediaServer",
+    "slug": "universalmediaserver",
     "description": "Universal Media Server Addons for Home Assistant.",
     "url": "https://github.com/amarok77/hassio-addons/UniversalMediaServer",
     "ports": {
