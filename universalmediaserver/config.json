@@ -3,12 +3,8 @@
     "version": "1.0",
     "slug": "universalmediaserver",
     "description": "Universal Media Server Addons for Home Assistant.",
-    "url": "https://github.com/amarok77/hassio-addons/UniversalMediaServer",
-    "ports": {
-      "9001/tcp": 9001
-      "5002/tcp": 5002
-      "1044/tcp": 1044
-    },
+    "url": "https://github.com/amarok77/hassio-addons/universalmediaserver",
+    "ports": {"9001/tcp": 9001},
     "arch": ["armhf", "amd64", "armv7", "aarch64"],
-    "webui": "http://[HOST]:[PORT:9001]"
+
 }
