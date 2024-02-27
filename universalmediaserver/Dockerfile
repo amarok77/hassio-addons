@@ -1,4 +1,7 @@
-FROM alpine
+#FROM alpine
+ARG BUILD_FROM
+
+FROM $BUILD_FROM
 
 LABEL org.opencontainers.image.authors="atamariya@gmail.com"
 
