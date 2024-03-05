@@ -33,7 +33,7 @@ options:
   db_name: null
   db_user: null
   db_password: null
-  dp_prefix: wp_
+  db_prefix: wp_
   init_commands: []
 schema:
   document_root: str
@@ -50,7 +50,7 @@ schema:
   db_name: str?
   db_user: str?
   db_password: str?
-  dp_prefix: str
+  db_prefix: str
   init_commands:
     - str?
 ports:
