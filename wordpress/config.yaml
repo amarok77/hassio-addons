@@ -46,10 +46,10 @@ schema:
   ssl: bool
   certfile: str
   keyfile: str
-  db_host: str
-  db_name: str
-  db_user: str
-  db_password: str
+  db_host: str?
+  db_name: str?
+  db_user: str?
+  db_password: str?
   dp_prefix: str
   init_commands:
     - str?
