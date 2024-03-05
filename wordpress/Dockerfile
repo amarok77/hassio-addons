@@ -40,7 +40,7 @@ RUN echo "Transferlog /dev/stdout" >> /etc/apache2/httpd.conf
 RUN wget https://wordpress.org/wordpress-6.4.3.zip \
     && unzip wordpress-6.4.3.zip \
 #   && cd wordpress-6.4.3 \
-    && mv wordpress-6.4.3 wordpress \
+#   && mv wordpress-6.4.3 wordpress \
     && rm -rf wordpress-6.4.3.zip
     
 # Copy data for add-on
