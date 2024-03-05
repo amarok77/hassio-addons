@@ -207,9 +207,10 @@ rm -rf wp-config.php
  echo "if ( ! defined( 'ABSPATH' ) ) {	define( 'ABSPATH', __DIR__ . '/' ); }" >>wp-config.php
  echo "require_once ABSPATH . 'wp-settings.php';" >>wp-config.php
 
-find $webrootdocker -type d -exec chown $username:www-data -R {} \;
+echo "ripristino i permessi dei file e delle cartelle"
+# find $webrootdocker -type d -exec chown $username:www-data -R {} \;
 find $webrootdocker -type d -exec chmod -R 755 {} \;
-find $webrootdocker -type f -exec chown $username:www-data -R {} \;
+# find $webrootdocker -type f -exec chown $username:www-data -R {} \;
 find $webrootdocker -type f -exec chmod -R 644 {} \;
 
 echo "Here is your web file architecture."
