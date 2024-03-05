@@ -188,7 +188,7 @@ echo "Here is your web file architecture."
 ls -l $webrootdocker
 
 # sed -i '/LoadModule rewrite_module/s/^#//g' $DocumentRoot/wp-config.php
-echo "Configuring wp-conf."
+echo "Configuring wp-conf.php"
 cd $DocumentRoot
 rm -rf wp-config.php
  echo "<?php" >>wp-config.php
@@ -209,6 +209,8 @@ rm -rf wp-config.php
  echo "define( 'WP_DEBUG', false );" >>wp-config.php
  echo "if ( ! defined( 'ABSPATH' ) ) {	define( 'ABSPATH', __DIR__ . '/' ); }" >>wp-config.php
  echo "require_once ABSPATH . 'wp-settings.php';" >>wp-config.php
-  
+
+chmod -R 771 * 
+
 echo "Starting Apache2..."
 exec /usr/sbin/httpd -D FOREGROUND
