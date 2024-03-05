@@ -202,7 +202,7 @@ rm -rf wp-config.php
  echo "define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );" >>wp-config.php
  echo "define( 'LOGGED_IN_SALT',   'put your unique phrase here' );" >>wp-config.php
  echo "define( 'NONCE_SALT',       'put your unique phrase here' );" >>wp-config.php
- echo '$table_prefix = '$db_prefix';' >>wp-config.php
+ echo '$table_prefix = '"'"$db_prefix"'"';' >>wp-config.php
  echo "define( 'WP_DEBUG', false );" >>wp-config.php
  echo "if ( ! defined( 'ABSPATH' ) ) {	define( 'ABSPATH', __DIR__ . '/' ); }" >>wp-config.php
  echo "require_once ABSPATH . 'wp-settings.php';" >>wp-config.php
