@@ -41,7 +41,7 @@ schema:
   default_conf: str
   default_ssl_conf: str
   website_name: str
-    username: str?
+  username: str?
   password: password?
   ssl: bool
   certfile: str
