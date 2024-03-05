@@ -40,12 +40,13 @@ if [ ! -d $DocumentRoot ]; then
 	#echo "You haven't put your website to $DocumentRoot"
 	echo "A default website will now be used"
 	mkdir $webrootdocker
-	cp -R /wordpress $webrootdocker
- 	rm -rf /wordpress
 else
 	#Create Shortcut to shared html folder
 	ln -s $DocumentRoot /var/www/localhost/htdocs
 fi
+
+cp -R /wordpress $DocumentRoot
+rm -rf /wordpress
 
 #Set rights to web folders and create user
 if [ -d $DocumentRoot ]; then
