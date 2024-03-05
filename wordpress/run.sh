@@ -17,6 +17,8 @@ default_ssl_conf=$(bashio::config 'default_ssl_conf')
 webrootdocker=/var/www/localhost/htdocs/
 phppath=/etc/php81/php.ini
 
+
+
 if [ $phpini = "get_file" ]; then
 	cp $phppath /share/apache2addon_php.ini
 	echo "You have requestet a copy of the php.ini file. You will now find your copy at /share/apache2addon_php.ini"
@@ -35,10 +37,11 @@ fi
 rm -r $webrootdocker
 
 if [ ! -d $DocumentRoot ]; then
-	echo "You haven't put your website to $DocumentRoot"
+	#echo "You haven't put your website to $DocumentRoot"
 	echo "A default website will now be used"
 	mkdir $webrootdocker
-	cp /index.html $webrootdocker
+	cd wordpress/	
+ 	mv -r * $webrootdocker
 else
 	#Create Shortcut to shared html folder
 	ln -s $DocumentRoot /var/www/localhost/htdocs
@@ -176,6 +179,8 @@ if [ "$default_ssl_conf" != "default" ]; then
 fi
 
 mkdir /usr/lib/php81/modules/opcache
+
+ln -s 
 
 echo "Here is your web file architecture."
 ls -l $webrootdocker
