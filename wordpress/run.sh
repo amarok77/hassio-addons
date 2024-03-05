@@ -185,7 +185,7 @@ ls -l $webrootdocker
 
 echo "Configuring wp-conf."
 cd $webrootdocker
-  echo "<?php"
+  echo "<?php" >>wp-config.php
   echo "define( 'DB_NAME', '"$db_name"' );" >>wp-config.php
 	echo "define( 'DB_USER', '"$db_user"' );" >>wp-config.php
   echo "define( 'DB_PASSWORD', '"$db_password"' );" >>wp-config.php
