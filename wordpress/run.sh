@@ -188,27 +188,27 @@ echo "Here is your web file architecture."
 ls -l $webrootdocker
 
 # sed -i '/LoadModule rewrite_module/s/^#//g' $DocumentRoot/wp-config.php
-#echo "Configuring wp-conf."
-#cd $DocumentRoot
-#rm -rf wp-config.php
-# echo "<?php" >>wp-config.php
-# echo "define( 'DB_NAME', '"$db_name"' );" >>wp-config.php
-# echo "define( 'DB_USER', '"$db_user"' );" >>wp-config.php
-# echo "define( 'DB_PASSWORD', '"$db_password"' );" >>wp-config.php
-# echo "define( 'DB_HOST', '"$db_host"' );" >>wp-config.php
-# echo "define( 'DB_COLLATE', '' );" >>wp-config.php
-# echo "define( 'AUTH_KEY',         'put your unique phrase here' );" >>wp-config.php
-# echo "define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );" >>wp-config.php
-# echo "define( 'LOGGED_IN_KEY',    'put your unique phrase here' );" >>wp-config.php
-# echo "define( 'NONCE_KEY',        'put your unique phrase here' );" >>wp-config.php
-# echo "define( 'AUTH_SALT',        'put your unique phrase here' );" >>wp-config.php
-# echo "define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );" >>wp-config.php
-# echo "define( 'LOGGED_IN_SALT',   'put your unique phrase here' );" >>wp-config.php
-# echo "define( 'NONCE_SALT',       'put your unique phrase here' );" >>wp-config.php
-# echo '$table_prefix = '$db_prefix';' >>wp-config.php
-# echo "define( 'WP_DEBUG', false );" >>wp-config.php
-# echo "if ( ! defined( 'ABSPATH' ) ) {	define( 'ABSPATH', __DIR__ . '/' ); }" >>wp-config.php
-# echo "require_once ABSPATH . 'wp-settings.php';" >>wp-config.php
+echo "Configuring wp-conf."
+cd $DocumentRoot
+rm -rf wp-config.php
+ echo "<?php" >>wp-config.php
+ echo "define( 'DB_NAME', '"$db_name"' );" >>wp-config.php
+ echo "define( 'DB_USER', '"$db_user"' );" >>wp-config.php
+ echo "define( 'DB_PASSWORD', '"$db_password"' );" >>wp-config.php
+ echo "define( 'DB_HOST', '"$db_host"' );" >>wp-config.php
+ echo "define( 'DB_COLLATE', '' );" >>wp-config.php
+ echo "define( 'AUTH_KEY',         'put your unique phrase here' );" >>wp-config.php
+ echo "define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );" >>wp-config.php
+ echo "define( 'LOGGED_IN_KEY',    'put your unique phrase here' );" >>wp-config.php
+ echo "define( 'NONCE_KEY',        'put your unique phrase here' );" >>wp-config.php
+ echo "define( 'AUTH_SALT',        'put your unique phrase here' );" >>wp-config.php
+ echo "define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );" >>wp-config.php
+ echo "define( 'LOGGED_IN_SALT',   'put your unique phrase here' );" >>wp-config.php
+ echo "define( 'NONCE_SALT',       'put your unique phrase here' );" >>wp-config.php
+ echo '$table_prefix = '$db_prefix';' >>wp-config.php
+ echo "define( 'WP_DEBUG', false );" >>wp-config.php
+ echo "if ( ! defined( 'ABSPATH' ) ) {	define( 'ABSPATH', __DIR__ . '/' ); }" >>wp-config.php
+ echo "require_once ABSPATH . 'wp-settings.php';" >>wp-config.php
   
 echo "Starting Apache2..."
 exec /usr/sbin/httpd -D FOREGROUND
