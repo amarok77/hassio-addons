@@ -184,9 +184,6 @@ fi
 
 mkdir /usr/lib/php81/modules/opcache
 
-echo "Here is your web file architecture."
-ls -l $webrootdocker
-
 # sed -i '/LoadModule rewrite_module/s/^#//g' $DocumentRoot/wp-config.php
 echo "Configuring wp-conf.php"
 cd $DocumentRoot
@@ -211,6 +208,9 @@ rm -rf wp-config.php
  echo "require_once ABSPATH . 'wp-settings.php';" >>wp-config.php
 
 chmod -R 771 * 
+
+echo "Here is your web file architecture."
+ls -l $webrootdocker
 
 echo "Starting Apache2..."
 exec /usr/sbin/httpd -D FOREGROUND
