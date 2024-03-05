@@ -45,7 +45,9 @@ else
 	ln -s $DocumentRoot /var/www/localhost/htdocs
 fi
 
-cp -R /wordpress $DocumentRoot
+cd /wordpress
+cp -R * $DocumentRoot
+cd ..
 rm -rf /wordpress
 
 #Set rights to web folders and create user
@@ -184,8 +186,10 @@ mkdir /usr/lib/php81/modules/opcache
 echo "Here is your web file architecture."
 ls -l $webrootdocker
 
+# sed -i '/LoadModule rewrite_module/s/^#//g' $DocumentRoot/wp-config.php
 echo "Configuring wp-conf."
-cd $webrootdocker
+cd $DocumentRoot
+rm -rf wp-config.php
   echo "<?php" >>wp-config.php
   echo "define( 'DB_NAME', '"$db_name"' );" >>wp-config.php
 	echo "define( 'DB_USER', '"$db_user"' );" >>wp-config.php
