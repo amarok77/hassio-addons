@@ -8,7 +8,7 @@ ARG BUILD_ARCH
 
 RUN wget https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/13.8.1/UMS-13.8.1-${BUILD_ARCH}.tgz \
     tar xvzf UMS-13.8.1-${BUILD_ARCH}.tgz \
-    cd 
+    cd UMS-13.8.1
 
 WORKDIR /usr/src/UMS-13.8.1/
 
