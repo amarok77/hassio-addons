@@ -1,13 +1,16 @@
-#FROM alpine
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:15.0.7
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM}
 
-FROM $BUILD_FROM
+RUN apk add --no-cache mediainfo dcraw vlc-nox mplayer mencoder wget tar
 
-LABEL org.opencontainers.image.authors="atamariya@gmail.com"
+ARG BUILD_ARCH
 
-RUN apk add --no-cache coreutils ffmpeg mediainfo openjdk17-jre iputils mplayer ttf-dejavu
+RUN wget https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/13.8.1/UMS-13.8.1-${BUILD_ARCH}.tgz \
+    tar xvzf UMS-13.8.1-${BUILD_ARCH}.tgz \
+    cd 
 
-WORKDIR /usr/src/ums/
+WORKDIR /usr/src/UMS-13.8.1/
 
 VOLUME /media
 
@@ -15,6 +18,6 @@ VOLUME /profile
 
 EXPOSE 9001 5002 1044
 
-COPY . /usr/src/ums/
-
-ENTRYPOINT [ "./docker-init" ]
+COPY run.sh /
+RUN chmod a+x /run.sh
+CMD [ "/run.sh" ]
