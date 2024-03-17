@@ -1,7 +1,6 @@
 {
   "arch": [
     "amd64",
-    "armhf",
     "arm64"
   ],
   "boot": "auto",
