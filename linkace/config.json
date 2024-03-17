@@ -11,7 +11,7 @@
     "share:ro"
   ],
   "version": "v0.0.21",
-  "name": "ladder",
+  "name": "linkace",
   "options": {},
   "ports": {
     "8080/tcp": "8080"
@@ -20,7 +20,7 @@
     "8080/tcp": "Web interface"
   },
   "schema": {},
-  "slug": "ladder",
+  "slug": "linkace",
   "startup": "services",
   "upstream": "v0.0.21",
   "url": "https://github.com/amarok77/hassio-addons",
