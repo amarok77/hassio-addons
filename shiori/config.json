@@ -26,6 +26,5 @@
   "version": "1.6.0",
   "ingress": true,
   "ingress_port": 8080,
-  "image": "ghcr.io/go-shiori/shiori",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:8080]"
 }
