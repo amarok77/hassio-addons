@@ -1,1 +1,0 @@
-exec ./UMS.sh
