@@ -1,0 +1,42 @@
+---
+name: Mozilla SyncServer
+version: 1.0
+slug: syncserver
+description: Self-Hosted Mozilla SyncServer
+url: https://github.com/amarok77/hassio-addons/syncserver
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: application
+boot: auto
+webui: http://[HOST]:[PORT:5000]
+map:
+  - ssl:rw
+  - media:rw
+  - share:rw
+ingress: true
+init: false
+panel_icon: mdi:web-box
+options:
+  port: 5000
+  SYNCSERVER_PUBLIC_URL: "http://localhost:5000"
+  SYNCSERVER_SECRET: "0123456789"
+  SYNCSERVER_SQLURI: "sqlite:////tmp/syncserver.db"
+  SYNCSERVER_BATCH_UPLOAD_ENABLED: true
+  SYNCSERVER_FORCE_WSGI_ENVIRON: false
+  SYNCSERVER_DEBUG_ENABLED: true
+schema:
+  port: str
+  SYNCSERVER_PUBLIC_URL: str
+  SYNCSERVER_SECRET: str
+  SYNCSERVER_SQLURI: str
+  SYNCSERVER_BATCH_UPLOAD_ENABLED: bool
+  SYNCSERVER_FORCE_WSGI_ENVIRON: bool
+  SYNCSERVER_DEBUG_ENABLED: bool
+ports:
+  5000/tcp: 5000
+ports_description:
+  5000/tcp: Web interface http
