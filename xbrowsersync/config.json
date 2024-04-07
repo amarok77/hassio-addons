@@ -10,7 +10,7 @@
     "share:rw",
     "ssl:ro"
   ],
-  "name": "xbookmarksync",
+  "name": "xbrowsersync",
   "options": {},
   "ports": {
     "8080/tcp": 8000
