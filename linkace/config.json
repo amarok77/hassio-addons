@@ -1,0 +1,31 @@
+{
+  "arch": [
+    "amd64",
+    "armv7"
+  ],
+  "boot": "auto",
+  "description": "A simple bookmarks manager written in the Go language. Intended as a simple clone of Pocket.",
+  "environment": {},
+  "map": [
+    "share:rw",
+    "ssl:ro"
+  ],
+  "name": "linkace",
+  "options": {},
+  "ports": {
+    "8000/tcp": 8000
+  },
+  "ports_description": {
+    "8000/tcp": "Web interface"
+  },
+  "schema": {},
+  "slug": "linkace",
+  "startup": "services",
+  "upstream": "v1.14.1",
+  "url": "https://github.com/amarok77/hassio-addons",
+  "version": "v1.14.1",
+  "ingress": true,
+  "ingress_port": 8000,
+  "image": "ghcr.io/kovah/linkace",
+  "webui": "[PROTO:ssl]://[HOST]:[PORT:8080]"
+}
