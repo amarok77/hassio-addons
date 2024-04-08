@@ -27,5 +27,5 @@
   "ingress": true,
   "ingress_port": 9000,
   "image": "ghcr.io/kovah/linkace",
-  "webui": "http://[HOST]:[PORT:9000]"
+  "webui": "[PROTO:ssl]://[HOST]:[PORT:9000]"
 }
