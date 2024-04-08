@@ -13,10 +13,10 @@
   "name": "linkace",
   "options": {},
   "ports": {
-    "8000/tcp": 8000
+    "9000/tcp": 9000
   },
   "ports_description": {
-    "8000/tcp": "Web interface"
+    "9000/tcp": "Web interface"
   },
   "schema": {},
   "slug": "linkace",
@@ -25,7 +25,7 @@
   "url": "https://github.com/amarok77/hassio-addons",
   "version": "v1.14.1",
   "ingress": true,
-  "ingress_port": 8000,
+  "ingress_port": 9000,
   "image": "ghcr.io/kovah/linkace",
-  "webui": "[PROTO:ssl]://[HOST]:[PORT:8080]"
+  "webui": "[HOST]:[PORT:9000]"
 }
