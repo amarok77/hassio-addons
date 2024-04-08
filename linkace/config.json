@@ -26,6 +26,6 @@
   "version": "v1.14.1",
   "ingress": true,
   "ingress_port": 9000,
-  "image": "ghcr.io/kovah/linkace",
+  "image": "ghcr.io/kovah/linkace:v1.14.1",
   "webui": "[HOST]:[PORT:9000]"
 }
