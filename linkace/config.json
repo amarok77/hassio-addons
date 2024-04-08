@@ -21,11 +21,11 @@
   "schema": {},
   "slug": "linkace",
   "startup": "services",
-  "upstream": "v1.14.1",
+  "upstream": "1.14.1",
   "url": "https://github.com/amarok77/hassio-addons",
-  "version": "v1.14.1",
+  "version": "1.14.1",
   "ingress": true,
   "ingress_port": 9000,
-  "image": "ghcr.io/kovah/linkace:v1.14.1",
+  "image": "ghcr.io/kovah/linkace",
   "webui": "[HOST]:[PORT:9000]"
 }
