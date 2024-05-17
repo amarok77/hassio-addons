@@ -1,0 +1,11 @@
+name: Manage my Damn Life
+version: 1.0
+slug: mmdl
+description: Calendar
+url: https://github.com/amarok77/hassio-addons/mmdl
+arch:
+  - amd64
+startup: application
+boot: auto
+webui: http://[HOST]:[PORT:3000]
+ingress: true
