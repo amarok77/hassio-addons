@@ -13,5 +13,3 @@ ports:
 #docker_api: true
 map:
   - docker_sock:ro
-options:
-schema:
