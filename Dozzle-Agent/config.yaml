@@ -1,13 +1,13 @@
 name: Dozzle Agent
+version: 1.0.0
 slug: Dozzle-Agent
-version: "1.0.0"
 description: Dozzle agent per i log Docker
 url: https://github.com/amarok77/hassio-addons/Dozzle-Agent
-startup: services
-boot: auto
 arch:
   - amd64
   - aarch64
+startup: services
+boot: auto
 ports:
   7007/tcp: 7007
 #docker_api: true
