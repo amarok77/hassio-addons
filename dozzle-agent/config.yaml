@@ -1,8 +1,8 @@
 name: Dozzle Agent
 version: 1.0.0
-slug: Dozzle-Agent
+slug: dozzle-agent
 description: Dozzle agent per i log Docker
-url: https://github.com/amarok77/hassio-addons/Dozzle-Agent
+url: https://github.com/amarok77/hassio-addons/dozzle-agent
 arch:
   - amd64
   - aarch64
