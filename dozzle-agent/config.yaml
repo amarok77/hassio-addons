@@ -1,5 +1,5 @@
 name: Dozzle Agent
-version: 1.0.0
+version: 1.0.1
 slug: dozzle-agent
 description: Dozzle agent per i log Docker
 url: https://github.com/amarok77/hassio-addons/dozzle-agent
