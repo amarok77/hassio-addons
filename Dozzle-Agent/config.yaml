@@ -8,7 +8,6 @@ boot: auto
 arch:
   - amd64
   - aarch64
-image: ghcr.io/amarok77/hassio-addons/dozzle-agent
 ports:
   7007/tcp: 7007
 docker_api: true
