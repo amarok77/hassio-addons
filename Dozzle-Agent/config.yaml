@@ -2,11 +2,13 @@ name: Dozzle Agent
 slug: Dozzle-Agent
 version: "1.0.0"
 description: Dozzle agent per i log Docker
+url: https://github.com/amir20/dozzle
 startup: services
 boot: auto
 arch:
   - amd64
   - aarch64
+image: ghcr.io/TUO_USER/dozzle-agent
 ports:
   7007/tcp: 7007
 docker_api: true
