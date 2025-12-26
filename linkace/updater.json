@@ -1,9 +1,0 @@
-{
-  "github_fulltag": "true",
-  "last_update": "20-02-2024",
-  "repository": "amarok77/hassio-addons",
-  "slug": "linkace",
-  "source": "github",
-  "upstream_repo": "kovah/linkace",
-  "upstream_version": "v1.14.1"
-}
