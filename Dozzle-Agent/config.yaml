@@ -10,6 +10,10 @@ startup: services
 boot: auto
 ports:
   7007/tcp: 7007
-#docker_api: true
+ports_description:
+  7007/tcp: Dozzle Agent API
+docker_api: true
 map:
   - docker_sock:ro
+options: {}
+schema: {}
