@@ -3,14 +3,15 @@ FROM $BUILD_FROM
 
 ARG TARGETARCH
 
-# Install curl e scarica Dozzle per arch corretta
-RUN apk add --no-cache curl tar \
- && if [ "$TARGETARCH" = "amd64" ]; then \
-      curl -L https://github.com/amir20/dozzle/releases/latest/download/dozzle_linux_amd64.tar.gz | tar xz -C /usr/local/bin dozzle; \
-    elif [ "$TARGETARCH" = "arm64" ]; then \
-      curl -L https://github.com/amir20/dozzle/releases/latest/download/dozzle_linux_arm64.tar.gz | tar xz -C /usr/local/bin dozzle; \
-    fi
+# installa curl e tar
+RUN apk add --no-cache curl tar
 
-# Script di avvio s6
-COPY run.sh /etc/services.d/dozzle/run
-RUN chmod +x /etc/services.d/dozzle/run
+# scarica Dozzle corretto
+RUN if [ "$TARGETARCH" = "amd64" ]; then \
+      DOZZLE_URL="https://github.com/amir20/dozzle/releases/latest/download/dozzle_linux_amd64.tar.gz"; \
+    elif [ "$TARGETARCH" = "arm64" ]; then \
+      DOZZLE_URL="https://github.com/amir20/dozzle/releases/latest/download/dozzle_linux_arm64.tar.gz"; \
+    fi && \
+    echo "Scarico Dozzle da $DOZZLE_URL" && \
+    curl -L $DOZZLE_URL | tar -xz -C /usr/local/bin
+
