@@ -10,7 +10,7 @@ arch:
   - aarch64
 ports:
   7007/tcp: 7007
-docker_api: true
+#docker_api: true
 map:
   - docker_sock:ro
 options:
