@@ -1,5 +1,5 @@
 name: Dozzle Agent
-slug: dozzle_agent
+slug: Dozzle-Agent
 version: "1.0.0"
 description: Dozzle agent per i log Docker
 startup: services
