@@ -4,21 +4,16 @@ version: "1.0.0"
 description: Dozzle agent per i log Docker
 startup: services
 boot: auto
-
 arch:
   - amd64
   - aarch64
   - armv7
   - armhf
   - i386
-
 ports:
   7007/tcp: 7007
-
 docker_api: true
-
 map:
   - docker_sock:ro
-
-options: {}
-schema: {}
+options:
+schema:
