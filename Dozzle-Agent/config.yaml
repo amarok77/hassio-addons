@@ -7,9 +7,6 @@ boot: auto
 arch:
   - amd64
   - aarch64
-  - armv7
-  - armhf
-  - i386
 ports:
   7007/tcp: 7007
 docker_api: true
