@@ -4,14 +4,6 @@ FROM $BUILD_FROM
 # Installa curl e tar
 RUN apk add --no-cache curl tar
 
-# Copia lo script che scarica Dozzle
-COPY download-dozzle.sh /tmp/download-dozzle.sh
-# Rendi lo script eseguibile
-RUN chmod +x /tmp/download-dozzle.sh
-
-# Esegui lo script in un RUN separato e fai echo di debug
-RUN sh -x /tmp/download-dozzle.sh
-
-# Script di avvio s6
+# Copia lo script di avvio
 COPY run.sh /etc/services.d/dozzle/run
 RUN chmod +x /etc/services.d/dozzle/run
