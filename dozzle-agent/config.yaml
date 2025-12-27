@@ -12,7 +12,9 @@ startup: service
 boot: auto
 init: false
 command: agent
-volumes:
+map:
   - /var/run/docker.sock:/var/run/docker.sock:ro
 ports:
-  - 7007:7007
+  7007/tcp: 7007
+ports_description:
+  7007/tcp: porta in ascolto agent
