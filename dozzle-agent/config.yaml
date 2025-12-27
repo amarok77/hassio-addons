@@ -3,16 +3,14 @@ version: 0.0.1
 slug: dozzle-agent
 description: Dozzle Agent
 url: https://github.com/amarok77/hassio-addons/dozzle-agent
+image: amir20/dozzle:latest
 arch:
-  - armhf
   - armv7
   - aarch64
   - amd64
-  - i386
 startup: service
 boot: auto
 init: false
-image: amir20/dozzle:latest
 command: agent
 volumes:
   - /var/run/docker.sock:/var/run/docker.sock:ro
